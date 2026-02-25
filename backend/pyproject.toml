@@ -1,0 +1,27 @@
+[project]
+name = "voice-webui"
+version = "0.1.0"
+dependencies = [
+    "aiomqtt",
+    "boto3",
+    "pydantic-settings",
+]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+voice-webui = "main:main"
+
+[tool.setuptools]
+# Explicitly list all your python file names (without .py)
+py-modules = [
+    "main",
+    "config",
+    "storage",
+]
+[tool.setuptools.package-data]
+# Include json files for all modules
+"*" = ["*.json"]
+
