@@ -80,7 +80,7 @@
     {
       # --- THE PACKAGE ---
       packages.${system}.default = backend;
-      nixosModules.${system}.default =
+      nixosModules.default =
         {
           self,
           config,
@@ -119,12 +119,12 @@
             };
 
             settings = {
-              webHost = mkOption {
+              host = mkOption {
                 type = types.str;
                 default = "0.0.0.0";
                 description = "IP address to bind the FastAPI server to.";
               };
-              webPort = mkOption {
+              port = mkOption {
                 type = types.int;
                 default = 8000;
                 description = "Port for the FastAPI server.";
@@ -188,8 +188,8 @@
 
               # Mapping Nix options to the environment variables Pydantic expects
               environment = {
-                WEB_HOST = cfg.settings.webHost;
-                WEB_PORT = toString cfg.settings.webPort;
+                WEB_HOST = cfg.settings.host;
+                WEB_PORT = toString cfg.settings.port;
 
                 MQTT_HOST = cfg.settings.mqttHost;
                 MQTT_PORT = toString cfg.settings.mqttPort;
