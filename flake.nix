@@ -82,7 +82,6 @@
       packages.${system}.default = backend;
       nixosModules.default =
         {
-          self,
           config,
           lib,
           pkgs,
