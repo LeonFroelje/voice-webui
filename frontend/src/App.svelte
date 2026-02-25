@@ -153,7 +153,15 @@
     }
     nav {
       display: flex;
+      gap: 1em;
       flex-direction: column;
+    }
+    .nav-btn {
+      height: 3rem;
+      font-size: 1.1rem;
+      font-weight: bold;
+      /* color: #fff; */
+      /* background:none; */
     }
   }
 
