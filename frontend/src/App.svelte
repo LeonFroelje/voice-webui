@@ -151,6 +151,10 @@
       cursor: pointer;
       margin-right: 1rem;
     }
+    nav {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   /* Keep existing .nav-btn and .logo styles from previous App.svelte... */
