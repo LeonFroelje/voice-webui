@@ -159,4 +159,21 @@
     color: #059669;
     margin-left: 1rem;
   }
+  /* Inside your component <style> blocks */
+  @media (max-width: 600px) {
+    .toolbar {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .btn-primary {
+      width: 100%; /* Make buttons full-width on tiny screens */
+    }
+
+    .cache-row {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
 </style>

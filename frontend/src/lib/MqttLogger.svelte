@@ -277,4 +277,8 @@
     word-break: break-all;
     color: #9cdcfe;
   }
+  .payload {
+    white-space: pre-wrap;
+    word-break: break-all; /* Prevents horizontal scrolling */
+  }
 </style>
