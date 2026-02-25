@@ -151,19 +151,72 @@
       cursor: pointer;
       margin-right: 1rem;
     }
-    nav {
-      display: flex;
-      gap: 1em;
-      flex-direction: column;
-    }
-    .nav-btn {
-      height: 3rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      /* color: #fff; */
-      /* background:none; */
-    }
+  }
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    flex-grow: 1;
   }
 
+  .nav-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .nav-btn:hover {
+    background: #1f2937;
+    color: white;
+  }
+
+  .nav-btn.active {
+    background: #3b82f6; /* Nice blue accent */
+    color: white;
+  }
+
+  .sidebar-footer {
+    padding: 1.5rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+    text-align: center;
+  }
+
+  /* --- CONTENT AREA --- */
+  .content {
+    flex-grow: 1;
+    background-color: #ffffff;
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  /* Simple CSS animation to make page switching feel smooth */
+  .page-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+    height: 100%;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
   /* Keep existing .nav-btn and .logo styles from previous App.svelte... */
 </style>
